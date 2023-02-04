@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="css.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto:ital@1&display=swap"
+    rel="stylesheet">
+
+<style>
+    body {
+        background-image: url(https://cdna.artstation.com/p/assets/images/images/004/305/426/large/mark-kolobaev-10planet10.jpg?1482243155);
+        background-position: center;
+        width: 100%;
+    }
+
+    #container1 {
+
+
+
+        background-image: url(https://cdnb.artstation.com/p/assets/images/images/009/362/999/large/phil-saunders-im-mk46-d-litweb.jpg?1518552137);
+        background-position: center;
+        background-size: cover;
+        width: 280px;
+
+        padding: 20px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-bottom: 10px;
+
+        border-radius: 50px;
+        border: 2px solid cyan;
+
+    }
+
+    .btn {
+
+        font-family: 'Poppins', sans-serif;
+
+        font-weight: 1000;
+
+        border-radius: 50%;
+        height: 60px;
+        width: 60px;
+        background-color: rgb(52, 49, 49);
+        color: white;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 5px;
+
+    }
+
+    .btn:active {
+
+        background-color: rgb(165, 11, 221);
+    }
+
+    ::-webkit-scrollbar {
+
+        display: none;
+    }
+
+    #input1 {
+
+        width: 280px;
+        height: 90px;
+        text-align: right;
+        border-radius: 30px;
+        background-color: rgb(52, 49, 49);
+
+        outline: rgb(127, 122, 122);
+        color: white;
+        margin-right: 20px;
+        font-size: 40px;
+        transition-duration: 0.5s;
+
+    }
+
+    #smt1 {
+
+        font-size: 30px;
+        color: aliceblue;
+
+    }
+
+    #heading3 {
+
+        display: flex;
+    }
+
+    #smt1 {
+
+
+        color: white;
+        font-size: 30px;
+        margin-left: 10px;
+    }
+
+    @media only screen and (max-width: 600px ){
+
+#container1{
+    padding-top:120px;
+    margin-left:-15px;
+    border-color: black;
+    border-radius: 0px;
+    width:100%;
+    background-repeat: no-repeat;
+    
+}
+*{
+    padding:0px;
+    margin: 0px;
+    overflow:hidden;
+}
+#input1{
+    width:260px;
+    margin-left:20px;
+}
+
+
+    }
+</style>
+
+<body>
+    
+        <audio controls id="music"  style="display:none;">
+            <source src="http://commondatastorage.googleapis.com/codeskulptor-demos/pyman_assets/eatpellet.ogg"
+                type="audio/mpeg">
+
+        </audio>
+        <audio controls id="music1"  style="display:none;">
+            <source src="http://codeskulptor-demos.commondatastorage.googleapis.com/descent/bomb.mp3"
+                type="audio/mpeg">
+
+        </audio>
+    
+    <center>
+        <div id="container1">
+
+            <h1>
+                <div id="heading3">
+
+                    <br>
+
+                </div>
+            </h1>
+            <div>
+
+                <input id="input1" type="text" placeholder="0">
+            </div>
+
+            <div id="row1">
+
+                <button id="ac1" onclick="ac1(),play2()" class="btn" style="color: rgb(255, 255, 255) ; background-color: rgb(255, 0, 0) " >
+                    AC
+                </button>
+                <button class="btn" onclick="back(),play()" style="color: rgb(30, 217, 170) ;  " >
+                    <big>⬅</big>
+                </button>
+                <button class="btn" onclick="num2('^'),play()"  style="color: rgb(30, 217, 170) ;  " >
+                    x<sup>2</sup>
+                </button>
+                <button class="btn" onclick="num('/'),play()" style="color: rgb(30, 217, 170) ;  " >
+                    /
+                </button>
+            </div>
+
+            <div id="row2">
+
+                <button class="btn" onclick="num(1),play()">
+                    1
+                </button>
+                <button class="btn" onclick="num(2),play()">
+                    2
+                </button>
+                <button class="btn" onclick="num(3),play()">
+                    3
+                </button>
+                <button class="btn" onclick="num('+'),play()" style="color: rgb(30, 217, 170) ;  " >
+                    +
+                </button>
+            </div>
+
+            <div id="row3">
+
+                <button class="btn" onclick="num(4),play()">
+                    4
+                </button>
+                <button onclick="num(5),play()" class="btn">
+                    5
+                </button>
+                <button class="btn" onclick="num(6),play()">
+                    6
+                </button>
+                <button class="btn" onclick="num('-'),play()" style="color: rgb(30, 217, 170) ;  " >
+                    -
+                </button>
+
+                <div id="row5">
+
+                    <button class="btn" onclick="num(7),play()">
+                        7
+                    </button>
+                    <button class="btn" onclick="num(8),play()">
+                        8
+                    </button>
+                    <button class="btn" onclick="num(9),play()">
+                        9
+                    </button>
+                    <button class="btn" onclick="num('*'),play()" style="color: rgb(30, 217, 170) ;  " >
+                        ×
+                    </button>
+
+                    <div id="row5">
+
+                        <button class="btn" onclick="num3('%'),play()">
+                            %
+                        </button>
+                        <button class="btn" onclick="num(0),play()">
+                            0
+                        </button>
+                        <button class="btn" onclick="num('.'),play()">
+                            .
+                        </button>
+                        <button class="btn" onclick="total(),play()"  style="color: rgb(255, 255, 255) ; background-color: rgb(33, 189, 124); "  >
+                            =
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+    </center>
+
+    <script>
+        let percent = false
+        function ac1() {
+            percent = false
+            document.getElementById('input1').value = ''
+            
+            document.getElementById('input1').style.fontSize="40px";
+           
+
+        }
+
+
+
+        function num(n) {
+            document.getElementById('input1').value += n
+
+        }
+
+        function total() {
+
+
+
+            if (percent) {
+                let result = document.getElementById('input1').value;
+
+
+
+
+                let ln = result.length
+                let i = result.indexOf('%');
+                let firstH = result.substr(0, i);
+                let secH = result.substr(i + 1, ln);
+
+                document.getElementById('input1').value = ((secH * 100) / firstH) + "%";
+
+            }
+
+            if (!percent) {
+                let result = document.getElementById('input1').value;
+                let fres = result.replace("^", "**")
+                document.getElementById('input1').value = eval(fres);
+            }
+
+        }
+        function num2(n) {
+
+
+            document.getElementById('input1').value += n;
+
+
+        }
+
+        function back() {
+
+            let str = document.getElementById('input1').value
+            let res = str.slice(0, -1)
+            document.getElementById('input1').value = res
+
+
+
+
+
+        }
+
+        function num3(n) {
+
+            percent = true
+
+            document.getElementById('input1').value += n;
+
+
+        }
+
+        let myMusic = document.getElementById("music");
+        function play() {
+            myMusic.play();
+            myMusic.volume=0.3
+        }
+        let myMusic2 = document.getElementById("music1");
+        function play2() {
+            myMusic2.play();
+        }
+
+        setInterval(() => {
+           let size= document.getElementById('input1').value;
+
+           if(size.length>=11){
+            document.getElementById('input1').style.fontSize="30px";
+           }
+           
+           if(size.length>=18){
+            document.getElementById('input1').style.fontSize="15px";
+           }
+        }, 100);
+
+
+
+
+//screen
+
+var winH = window.innerHeight + "px";
+document.getElementById('container1').style.height=winH
+
+
+    </script>
+</body>
+
+</html>
